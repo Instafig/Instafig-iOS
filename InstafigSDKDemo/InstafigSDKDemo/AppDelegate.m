@@ -1,14 +1,14 @@
 //
 //  AppDelegate.m
-//  InstafigSDK
+//  InstafigSDKDemo
 //
-//  Created by shy on 16/3/4.
+//  Created by shy on 16/3/8.
 //  Copyright © 2016年 AppTao. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "AWInstafig.h"
 #import "ViewController.h"
+#import "AWInstafig.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +25,7 @@
     ViewController *vc = [[ViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
+    
     // Override point for customization after application launch.
     return YES;
 }
@@ -45,9 +46,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     AWInstafig *instafig = [AWInstafig sharedInstance];
-    [instafig startWithAppKey:@"1b0296c1229544f88a9e610774e19784"];//9e5ad220c6e54fab9ff2402346a2dcaf
-
-    NSLog(@"app did become active");
+    [instafig startWithAppKey:@"1b0296c1229544f88a9e610774e19784"];
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
@@ -64,7 +63,7 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (NSURL *)applicationDocumentsDirectory {
-    // The directory the application uses to store the Core Data store file. This code uses a directory named "com.apptao.InstafigSDK" in the application's documents directory.
+    // The directory the application uses to store the Core Data store file. This code uses a directory named "com.apptao.InstafigSDKDemo" in the application's documents directory.
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
@@ -73,7 +72,7 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"InstafigSDK" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"InstafigSDKDemo" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -87,7 +86,7 @@
     // Create the coordinator and store
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"InstafigSDK.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"InstafigSDKDemo.sqlite"];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {

@@ -1,18 +1,18 @@
 //
-//  InstafigSDKUITests.m
-//  InstafigSDKUITests
+//  InstafigSDKDemoUITests.m
+//  InstafigSDKDemoUITests
 //
-//  Created by shy on 16/3/4.
+//  Created by shy on 16/3/8.
 //  Copyright © 2016年 AppTao. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface InstafigSDKUITests : XCTestCase
+@interface InstafigSDKDemoUITests : XCTestCase
 
 @end
 
-@implementation InstafigSDKUITests
+@implementation InstafigSDKDemoUITests
 
 - (void)setUp {
     [super setUp];

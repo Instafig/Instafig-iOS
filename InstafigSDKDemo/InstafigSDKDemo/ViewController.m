@@ -1,8 +1,8 @@
 //
 //  ViewController.m
-//  InstafigSDK
+//  InstafigSDKDemo
 //
-//  Created by shy on 16/3/4.
+//  Created by shy on 16/3/8.
 //  Copyright © 2016年 AppTao. All rights reserved.
 //
 

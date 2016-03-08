@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		928AACE51C8EC20200474BB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 928AACE41C8EC20200474BB9 /* main.m */; };
+		928AACE81C8EC20200474BB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 928AACE71C8EC20200474BB9 /* AppDelegate.m */; };
+		928AACEB1C8EC20200474BB9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928AACEA1C8EC20200474BB9 /* ViewController.m */; };
+		928AACF11C8EC20200474BB9 /* InstafigSDKDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 928AACEF1C8EC20200474BB9 /* InstafigSDKDemo.xcdatamodeld */; };
+		928AACF31C8EC20200474BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 928AACF21C8EC20200474BB9 /* Assets.xcassets */; };
+		928AACF61C8EC20200474BB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928AACF41C8EC20200474BB9 /* LaunchScreen.storyboard */; };
+		928AAD011C8EC20200474BB9 /* InstafigSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 928AAD001C8EC20200474BB9 /* InstafigSDKDemoTests.m */; };
+		928AAD0C1C8EC20200474BB9 /* InstafigSDKDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 928AAD0B1C8EC20200474BB9 /* InstafigSDKDemoUITests.m */; };
+		928AAD1C1C8EC25B00474BB9 /* AWInstafig.m in Sources */ = {isa = PBXBuildFile; fileRef = 928AAD1B1C8EC25B00474BB9 /* AWInstafig.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		928AACFD1C8EC20200474BB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 928AACD81C8EC20200474BB9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 928AACDF1C8EC20200474BB9;
+			remoteInfo = InstafigSDKDemo;
+		};
+		928AAD081C8EC20200474BB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 928AACD81C8EC20200474BB9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 928AACDF1C8EC20200474BB9;
+			remoteInfo = InstafigSDKDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		928AACE01C8EC20200474BB9 /* InstafigSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstafigSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		928AACE41C8EC20200474BB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		928AACE61C8EC20200474BB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		928AACE71C8EC20200474BB9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		928AACE91C8EC20200474BB9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		928AACEA1C8EC20200474BB9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		928AACF01C8EC20200474BB9 /* InstafigSDKDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InstafigSDKDemo.xcdatamodel; sourceTree = "<group>"; };
+		928AACF21C8EC20200474BB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		928AACF51C8EC20200474BB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		928AACF71C8EC20200474BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		928AACFC1C8EC20200474BB9 /* InstafigSDKDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstafigSDKDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		928AAD001C8EC20200474BB9 /* InstafigSDKDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstafigSDKDemoTests.m; sourceTree = "<group>"; };
+		928AAD021C8EC20200474BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		928AAD071C8EC20200474BB9 /* InstafigSDKDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstafigSDKDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		928AAD0B1C8EC20200474BB9 /* InstafigSDKDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstafigSDKDemoUITests.m; sourceTree = "<group>"; };
+		928AAD0D1C8EC20200474BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		928AAD1A1C8EC25B00474BB9 /* AWInstafig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWInstafig.h; path = ../../InstafigSDK/AWInstafig.h; sourceTree = "<group>"; };
+		928AAD1B1C8EC25B00474BB9 /* AWInstafig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWInstafig.m; path = ../../InstafigSDK/AWInstafig.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		928AACDD1C8EC20200474BB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		928AACF91C8EC20200474BB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		928AAD041C8EC20200474BB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		928AACD71C8EC20200474BB9 = {
+			isa = PBXGroup;
+			children = (
+				928AACE21C8EC20200474BB9 /* InstafigSDKDemo */,
+				928AACFF1C8EC20200474BB9 /* InstafigSDKDemoTests */,
+				928AAD0A1C8EC20200474BB9 /* InstafigSDKDemoUITests */,
+				928AACE11C8EC20200474BB9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		928AACE11C8EC20200474BB9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				928AACE01C8EC20200474BB9 /* InstafigSDKDemo.app */,
+				928AACFC1C8EC20200474BB9 /* InstafigSDKDemoTests.xctest */,
+				928AAD071C8EC20200474BB9 /* InstafigSDKDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		928AACE21C8EC20200474BB9 /* InstafigSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				928AAD191C8EC24F00474BB9 /* SDK */,
+				928AACE61C8EC20200474BB9 /* AppDelegate.h */,
+				928AACE71C8EC20200474BB9 /* AppDelegate.m */,
+				928AACE91C8EC20200474BB9 /* ViewController.h */,
+				928AACEA1C8EC20200474BB9 /* ViewController.m */,
+				928AACF21C8EC20200474BB9 /* Assets.xcassets */,
+				928AACF41C8EC20200474BB9 /* LaunchScreen.storyboard */,
+				928AACF71C8EC20200474BB9 /* Info.plist */,
+				928AACEF1C8EC20200474BB9 /* InstafigSDKDemo.xcdatamodeld */,
+				928AACE31C8EC20200474BB9 /* Supporting Files */,
+			);
+			path = InstafigSDKDemo;
+			sourceTree = "<group>";
+		};
+		928AACE31C8EC20200474BB9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				928AACE41C8EC20200474BB9 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		928AACFF1C8EC20200474BB9 /* InstafigSDKDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				928AAD001C8EC20200474BB9 /* InstafigSDKDemoTests.m */,
+				928AAD021C8EC20200474BB9 /* Info.plist */,
+			);
+			path = InstafigSDKDemoTests;
+			sourceTree = "<group>";
+		};
+		928AAD0A1C8EC20200474BB9 /* InstafigSDKDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				928AAD0B1C8EC20200474BB9 /* InstafigSDKDemoUITests.m */,
+				928AAD0D1C8EC20200474BB9 /* Info.plist */,
+			);
+			path = InstafigSDKDemoUITests;
+			sourceTree = "<group>";
+		};
+		928AAD191C8EC24F00474BB9 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				928AAD1A1C8EC25B00474BB9 /* AWInstafig.h */,
+				928AAD1B1C8EC25B00474BB9 /* AWInstafig.m */,
+			);
+			name = SDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		928AACDF1C8EC20200474BB9 /* InstafigSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 928AAD101C8EC20200474BB9 /* Build configuration list for PBXNativeTarget "InstafigSDKDemo" */;
+			buildPhases = (
+				928AACDC1C8EC20200474BB9 /* Sources */,
+				928AACDD1C8EC20200474BB9 /* Frameworks */,
+				928AACDE1C8EC20200474BB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InstafigSDKDemo;
+			productName = InstafigSDKDemo;
+			productReference = 928AACE01C8EC20200474BB9 /* InstafigSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		928AACFB1C8EC20200474BB9 /* InstafigSDKDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 928AAD131C8EC20200474BB9 /* Build configuration list for PBXNativeTarget "InstafigSDKDemoTests" */;
+			buildPhases = (
+				928AACF81C8EC20200474BB9 /* Sources */,
+				928AACF91C8EC20200474BB9 /* Frameworks */,
+				928AACFA1C8EC20200474BB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				928AACFE1C8EC20200474BB9 /* PBXTargetDependency */,
+			);
+			name = InstafigSDKDemoTests;
+			productName = InstafigSDKDemoTests;
+			productReference = 928AACFC1C8EC20200474BB9 /* InstafigSDKDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		928AAD061C8EC20200474BB9 /* InstafigSDKDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 928AAD161C8EC20200474BB9 /* Build configuration list for PBXNativeTarget "InstafigSDKDemoUITests" */;
+			buildPhases = (
+				928AAD031C8EC20200474BB9 /* Sources */,
+				928AAD041C8EC20200474BB9 /* Frameworks */,
+				928AAD051C8EC20200474BB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				928AAD091C8EC20200474BB9 /* PBXTargetDependency */,
+			);
+			name = InstafigSDKDemoUITests;
+			productName = InstafigSDKDemoUITests;
+			productReference = 928AAD071C8EC20200474BB9 /* InstafigSDKDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		928AACD81C8EC20200474BB9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = AppTao;
+				TargetAttributes = {
+					928AACDF1C8EC20200474BB9 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 3SAH2BWM9F;
+					};
+					928AACFB1C8EC20200474BB9 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 3SAH2BWM9F;
+						TestTargetID = 928AACDF1C8EC20200474BB9;
+					};
+					928AAD061C8EC20200474BB9 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 3SAH2BWM9F;
+						TestTargetID = 928AACDF1C8EC20200474BB9;
+					};
+				};
+			};
+			buildConfigurationList = 928AACDB1C8EC20200474BB9 /* Build configuration list for PBXProject "InstafigSDKDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 928AACD71C8EC20200474BB9;
+			productRefGroup = 928AACE11C8EC20200474BB9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				928AACDF1C8EC20200474BB9 /* InstafigSDKDemo */,
+				928AACFB1C8EC20200474BB9 /* InstafigSDKDemoTests */,
+				928AAD061C8EC20200474BB9 /* InstafigSDKDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		928AACDE1C8EC20200474BB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				928AACF61C8EC20200474BB9 /* LaunchScreen.storyboard in Resources */,
+				928AACF31C8EC20200474BB9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		928AACFA1C8EC20200474BB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		928AAD051C8EC20200474BB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		928AACDC1C8EC20200474BB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				928AACF11C8EC20200474BB9 /* InstafigSDKDemo.xcdatamodeld in Sources */,
+				928AAD1C1C8EC25B00474BB9 /* AWInstafig.m in Sources */,
+				928AACEB1C8EC20200474BB9 /* ViewController.m in Sources */,
+				928AACE81C8EC20200474BB9 /* AppDelegate.m in Sources */,
+				928AACE51C8EC20200474BB9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		928AACF81C8EC20200474BB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				928AAD011C8EC20200474BB9 /* InstafigSDKDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		928AAD031C8EC20200474BB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				928AAD0C1C8EC20200474BB9 /* InstafigSDKDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		928AACFE1C8EC20200474BB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 928AACDF1C8EC20200474BB9 /* InstafigSDKDemo */;
+			targetProxy = 928AACFD1C8EC20200474BB9 /* PBXContainerItemProxy */;
+		};
+		928AAD091C8EC20200474BB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 928AACDF1C8EC20200474BB9 /* InstafigSDKDemo */;
+			targetProxy = 928AAD081C8EC20200474BB9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		928AACF41C8EC20200474BB9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				928AACF51C8EC20200474BB9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		928AAD0E1C8EC20200474BB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		928AAD0F1C8EC20200474BB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		928AAD111C8EC20200474BB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InstafigSDKDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.apptao.InstafigSDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		928AAD121C8EC20200474BB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InstafigSDKDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.apptao.InstafigSDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		928AAD141C8EC20200474BB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = InstafigSDKDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.apptao.InstafigSDKDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstafigSDKDemo.app/InstafigSDKDemo";
+			};
+			name = Debug;
+		};
+		928AAD151C8EC20200474BB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = InstafigSDKDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.apptao.InstafigSDKDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstafigSDKDemo.app/InstafigSDKDemo";
+			};
+			name = Release;
+		};
+		928AAD171C8EC20200474BB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = InstafigSDKDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.apptao.InstafigSDKDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = InstafigSDKDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		928AAD181C8EC20200474BB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = InstafigSDKDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.apptao.InstafigSDKDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = InstafigSDKDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		928AACDB1C8EC20200474BB9 /* Build configuration list for PBXProject "InstafigSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				928AAD0E1C8EC20200474BB9 /* Debug */,
+				928AAD0F1C8EC20200474BB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		928AAD101C8EC20200474BB9 /* Build configuration list for PBXNativeTarget "InstafigSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				928AAD111C8EC20200474BB9 /* Debug */,
+				928AAD121C8EC20200474BB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		928AAD131C8EC20200474BB9 /* Build configuration list for PBXNativeTarget "InstafigSDKDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				928AAD141C8EC20200474BB9 /* Debug */,
+				928AAD151C8EC20200474BB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		928AAD161C8EC20200474BB9 /* Build configuration list for PBXNativeTarget "InstafigSDKDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				928AAD171C8EC20200474BB9 /* Debug */,
+				928AAD181C8EC20200474BB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		928AACEF1C8EC20200474BB9 /* InstafigSDKDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				928AACF01C8EC20200474BB9 /* InstafigSDKDemo.xcdatamodel */,
+			);
+			currentVersion = 928AACF01C8EC20200474BB9 /* InstafigSDKDemo.xcdatamodel */;
+			path = InstafigSDKDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 928AACD81C8EC20200474BB9 /* Project object */;
+}
