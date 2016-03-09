@@ -30,6 +30,7 @@ NSString *const AWInstafigConfLoadFailedNotification = @"AWInstafigConfLoadFaile
 @property (nonatomic, strong) NSUserDefaults *instafigDefaults;
 @property (nonatomic, assign) NSUInteger currentTryCount;
 @property (nonatomic, assign) NSUInteger maxRetryCount;
+@property (nonatomic, copy) NSString *lastServerAddress;
 
 @end
 
@@ -82,8 +83,14 @@ NSString *const AWInstafigConfLoadFailedNotification = @"AWInstafigConfLoadFaile
     __weak typeof(self) wself = self;
     NSURLSessionDataTask *task = [session dataTaskWithURL:[self confUrlWithServerHost:serverHost] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
-            [wself performSelector:@selector(retryUpdateConf) withObject:nil afterDelay:5];
+            if (self.lastServerAddress && [self.lastServerAddress isEqualToString:serverHost]) {
+                [wself performSelector:@selector(retryUpdateConf) withObject:nil afterDelay:5];
+            } else {
+                [wself retryUpdateConf];
+            }
         } else {
+            wself.currentTryCount = 0;
+            wself.lastServerAddress = nil;
             NSDate *now = [NSDate date];
             NSTimeInterval timeNow = [now timeIntervalSince1970];
             [wself.instafigDefaults setObject:@(timeNow) forKey:keyAWInstafigLastUpdateDate];
@@ -92,7 +99,6 @@ NSString *const AWInstafigConfLoadFailedNotification = @"AWInstafigConfLoadFaile
                 id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
                 if (result && [result isKindOfClass:[NSDictionary class]] && result[@"data"] && [result[@"data"] isKindOfClass:[NSDictionary class]]) {
                     [wself saveConfiguration:result[@"data"]];
-                    wself.currentTryCount = 0;
                     [[NSNotificationCenter defaultCenter] postNotificationName:AWInstafigConfLoadSucceedNotification object:result[@"data"]];
                 }
             }
@@ -114,11 +120,13 @@ NSString *const AWInstafigConfLoadFailedNotification = @"AWInstafigConfLoadFaile
     NSString *server = [self serverHostWithHttpScheme:[self.nodeList firstObject]];
     if (!(server && [server length])) {
         self.currentTryCount = 0;
+        self.lastServerAddress = nil;
         [[NSNotificationCenter defaultCenter] postNotificationName:AWInstafigConfLoadFailedNotification object:nil];
         return;
     }
     [self getAppConfigurationWithServerHost:server];
     if (self.nodeList.count) {
+        self.lastServerAddress = server;
         [self.nodeList removeObjectAtIndex:0];
     }
 }
