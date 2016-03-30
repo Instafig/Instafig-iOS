@@ -9,9 +9,9 @@
 #import "ViewController.h"
 #import "AWInstafig.h"
 
-static NSString *const AWInstafigLoadingHint = @"Loading Configuration...";
-static NSString *const AWInstafigLoadedHint = @"Load Configuration Succeed";
-static NSString *const AWInstafigLoadFailed = @"Load Configuration Failed";
+static NSString *const AWInstafigLoadingHint = @"Loading ...";
+static NSString *const AWInstafigLoadedHint = @"Load Succeed";
+static NSString *const AWInstafigLoadFailed = @"Load Failed";
 static NSString *const AWInstafigConfCellIdentifier = @"AWInstafigConfCellIdentifier";
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
