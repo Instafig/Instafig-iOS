@@ -234,7 +234,7 @@ NSString *const AWInstafigConfLoadFailedNotification = @"AWInstafigConfLoadFaile
 
 - (NSString *)serverHostWithHttpScheme:(NSString *)serverHost {
     if (serverHost && serverHost.length) {
-        if (![serverHost containsString:@"http://"]) {
+        if (![serverHost hasPrefix:@"http://"]) {
             return [NSString stringWithFormat:@"http://%@", serverHost];
         }
     }
