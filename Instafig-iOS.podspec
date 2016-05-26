@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Instafig-iOS"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "iOS SDK for Instafig"
 
   s.description  = <<-DESC
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "7.0"
 
-  s.source       = { :git => "https://github.com/Instafig/Instafig-iOS.git", :tag => "0.0.2" }
+  s.source       = { :git => "https://github.com/Instafig/Instafig-iOS.git", :tag => "0.0.3" }
 
   s.source_files  = "InstafigSDK", "InstafigSDK/**/*.{h,m}"
   s.exclude_files = "Classes/Exclude"
