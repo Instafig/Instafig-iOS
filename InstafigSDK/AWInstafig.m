@@ -99,21 +99,35 @@ NSString *const AWInstafigConfLoadFailedNotification = @"AWInstafigConfLoadFaile
             }
         } else {
             self.isUpdating = NO;
-            wself.currentTryCount = 0;
             wself.lastServerAddress = nil;
-            NSDate *now = [NSDate date];
-            NSTimeInterval timeNow = [now timeIntervalSince1970];
-            [wself.instafigDefaults setObject:@(timeNow) forKey:keyAWInstafigLastUpdateDate];
-            [wself.instafigDefaults synchronize];
             if (data) {
                 id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
                 if (result && [result isKindOfClass:[NSDictionary class]] && result[@"data"] && [result[@"data"] isKindOfClass:[NSDictionary class]]) {
+                    wself.currentTryCount = 0;
+                    NSDate *now = [NSDate date];
+                    NSTimeInterval timeNow = [now timeIntervalSince1970];
+                    [wself.instafigDefaults setObject:@(timeNow) forKey:keyAWInstafigLastUpdateDate];
+                    [wself.instafigDefaults synchronize];
                     [wself saveConfiguration:result[@"data"]];
                     [[NSNotificationCenter defaultCenter] postNotificationName:AWInstafigConfLoadSucceedNotification object:result[@"data"]];
+                } else {
+                    if (self.nodeList.count) {
+                        [self.nodeList removeObjectAtIndex:0];
+                    }
+                    if (self.lastServerAddress && [self.lastServerAddress isEqualToString:serverHost]) {
+                        [wself performSelector:@selector(retryUpdateConf) withObject:nil afterDelay:5];
+                    } else {
+                        [wself retryUpdateConf];
+                    }
                 }
             } else {
                 if (self.nodeList.count) {
                     [self.nodeList removeObjectAtIndex:0];
+                }
+                if (self.lastServerAddress && [self.lastServerAddress isEqualToString:serverHost]) {
+                    [wself performSelector:@selector(retryUpdateConf) withObject:nil afterDelay:5];
+                } else {
+                    [wself retryUpdateConf];
                 }
             }
         }
