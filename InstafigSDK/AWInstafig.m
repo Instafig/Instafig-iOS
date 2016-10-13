@@ -68,6 +68,10 @@ NSString *const AWInstafigConfLoadFailedNotification = @"AWInstafigConfLoadFaile
 
 - (NSDate *)lastUpdateTime {
     double time  = [self.instafigDefaults doubleForKey:keyAWInstafigLastUpdateDate];
+    if (time < 1) {
+        return nil;
+    }
+    
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];
     
     return date;
