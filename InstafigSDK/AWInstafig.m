@@ -113,7 +113,7 @@ NSString *const AWInstafigConfLoadFailedNotification = @"AWInstafigConfLoadFaile
                     [wself.instafigDefaults setObject:@(timeNow) forKey:keyAWInstafigLastUpdateDate];
                     [wself.instafigDefaults synchronize];
                     [wself saveConfiguration:result[@"data"]];
-                    [[NSNotificationCenter defaultCenter] postNotificationName:AWInstafigConfLoadSucceedNotification object:result[@"data"]];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:AWInstafigConfLoadSucceedNotification object:self];
                 } else {
                     if (self.nodeList.count) {
                         [self.nodeList removeObjectAtIndex:0];
@@ -154,7 +154,7 @@ NSString *const AWInstafigConfLoadFailedNotification = @"AWInstafigConfLoadFaile
         self.isUpdating = NO;
         self.currentTryCount = 0;
         self.lastServerAddress = nil;
-        [[NSNotificationCenter defaultCenter] postNotificationName:AWInstafigConfLoadFailedNotification object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:AWInstafigConfLoadFailedNotification object:self];
         return;
     }
     [self getAppConfigurationWithServerHost:server];
