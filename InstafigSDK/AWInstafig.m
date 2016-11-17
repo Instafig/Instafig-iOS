@@ -32,6 +32,7 @@ NSString *const AWInstafigConfLoadFailedNotification = @"AWInstafigConfLoadFaile
 @property (nonatomic, assign) NSUInteger maxRetryCount;
 @property (nonatomic, copy) NSString *lastServerAddress;
 @property (nonatomic, assign) BOOL isUpdating;
+@property (nonatomic, copy) void (^fetchCompletionHandler)(UIBackgroundFetchResult);
 
 @end
 
@@ -64,6 +65,17 @@ NSString *const AWInstafigConfLoadFailedNotification = @"AWInstafigConfLoadFaile
         [self.instafigDefaults synchronize];
     }
     [self retryUpdateConf];
+}
+
+- (void)setupBackgroundFetch {
+    if (kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iOS_7_0) {
+        [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
+    }
+}
+
+- (void)fetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))hander {
+    [self retryUpdateConf];
+    self.fetchCompletionHandler = hander;
 }
 
 - (NSDate *)lastUpdateTime {
@@ -113,6 +125,9 @@ NSString *const AWInstafigConfLoadFailedNotification = @"AWInstafigConfLoadFaile
                     [wself.instafigDefaults setObject:@(timeNow) forKey:keyAWInstafigLastUpdateDate];
                     [wself.instafigDefaults synchronize];
                     [wself saveConfiguration:result[@"data"]];
+                    if (wself.fetchCompletionHandler) {
+                        wself.fetchCompletionHandler(UIBackgroundFetchResultNewData);
+                    }
                     [[NSNotificationCenter defaultCenter] postNotificationName:AWInstafigConfLoadSucceedNotification object:self];
                 } else {
                     if (self.nodeList.count) {
@@ -154,6 +169,9 @@ NSString *const AWInstafigConfLoadFailedNotification = @"AWInstafigConfLoadFaile
         self.isUpdating = NO;
         self.currentTryCount = 0;
         self.lastServerAddress = nil;
+        if (self.fetchCompletionHandler) {
+            self.fetchCompletionHandler(UIBackgroundFetchResultFailed);
+        }
         [[NSNotificationCenter defaultCenter] postNotificationName:AWInstafigConfLoadFailedNotification object:self];
         return;
     }

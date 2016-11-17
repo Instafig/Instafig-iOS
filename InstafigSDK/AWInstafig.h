@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 extern NSString *const AWInstafigConfLoadSucceedNotification;
 extern NSString *const AWInstafigConfLoadFailedNotification;
@@ -16,6 +17,10 @@ extern NSString *const AWInstafigConfLoadFailedNotification;
 + (AWInstafig *)sharedInstance;
 
 - (void)startWithAppKey:(NSString*)appKey;
+
+- (void)setupBackgroundFetch;
+
+- (void)fetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))hander;
 
 - (NSDate *)lastUpdateTime;
 
